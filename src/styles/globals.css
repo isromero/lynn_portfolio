@@ -30,3 +30,7 @@ body {
 .transition-width-opacity {
   transition: width 0.2s linear, opacity 0.2s ease-in;
 }
+
+.transition-margin-height {
+  transition: margin 0.2s linear, height 0.2s linear;
+}
