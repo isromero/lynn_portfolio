@@ -2,15 +2,33 @@ import Link from 'next/link';
 import { useState } from 'react';
 import '@styles/globals.css';
 
-const HeaderNav = () => {
+type Props = {
+  fixedTop?: boolean;
+};
+
+const HeaderNav = ({ fixedTop = false }: Props)  => {
   const [aboutMe, setAboutMe] = useState(false);
   const [contact, setContact] = useState(false);
 
+  const handleAboutMe = () => {
+    setContact(false);
+    setAboutMe(!aboutMe);
+  }
+
+  const handleContact = () => {
+    setAboutMe(false);
+    setContact(!contact);
+  }
+
+  const headerPositionClass = aboutMe ? 'top-20 -translate-y-1/4' : (fixedTop ? 'top-20 -translate-y-20' : (!contact ? 'top-2/4 -translate-y-2/4' : 'top-20'));
+  const aboutMeSectionClass = aboutMe ? 'h-auto opacity-100 visible' : 'opacity-0 invisible h-0';
+
+  
   return (
     <>
-      <header className="sticky top-20 z-10 text-center bg-white/80 rounded-lg px-2 py-[7px] flex gap-x-4 items-center h-12">
+      <header className={`fixed z-50 text-center bg-white/80 rounded-lg px-2 py-[7px] flex gap-x-4 items-center h-12 transition-all duration-[900ms] ${headerPositionClass}`}>
         <div className="w-32 relative flex gap-x-4 h-full">
-          <div className="w-16 hover:w-full bg-black hover:bg-black rounded-lg text-[0.5rem] flex justify-center items-center transition-width h-full">
+          <div className="w-16 hover:w-full bg-black hover:bg-black rounded-lg text-[0.5rem] flex justify-center items-center transition-width h-full font-medium">
             <button
               type="button"
               className="bg-black/80 w-16 h-full hover:opacity-0 hover:invisible rounded-lg"
@@ -24,7 +42,7 @@ const HeaderNav = () => {
               <button
                 type="button"
                 className="w-full h-full justify-center flex items-center hover:text-white/80"
-                onClick={() => setAboutMe(!aboutMe)}
+                onClick={handleAboutMe}
               >
                 Sobre mí
               </button>
@@ -36,20 +54,36 @@ const HeaderNav = () => {
         </div>
         <button
           type="button"
-          className="bg-blue-green/80 hover:bg-blue-green h-full w-16 rounded-lg text-[0.5rem]" onClick={() => setContact(!contact)}
+          className="bg-blue-green/80 hover:bg-blue-green h-full w-16 rounded-lg text-[0.5rem]" onClick={handleContact}
         >
           Contacto
         </button>
       </header>
-      <section className={`bg-white/90 text-[#616060] z-10 gap-y-10 w-5/6 rounded-lg overflow-y-hidden transition-margin-height ${aboutMe ? 'opacity-100 visible mt-20 h-auto px-8 py-6' : 'opacity-0 invisible mt-0 h-0 py-0 px-0'}`}>
-        <h2 className='text-3xl font-libre-baskerville mb-3'>Sobre mí</h2>
-        <p className='text-xs'>¡Hola! Mi nombre es Lynn, y soy diseñadora gráfica con un favoritismo por el branding.</p>
-        <br />
-        <p className='text-xs'>Estoy graduada en Marketing y Publicidad, pero mi pasión ha sido desde siempre crear y explotar al máximo mi creatividad, por ello, en este portfolio te presento mis proyectos, reales y ficticios. Me gusta salir de mi zona de confort y poder dar mi máximo en cada situación que se me presenta.</p>
-        <br />
-        <p className='text-xs'>Me considero alguien muy, perfeccionista, resolutiva y ambiciosa.</p>
-        <br />
-        <p className='text-xs'>Ah, y también me considero buena cocinera y una chica muy amable, por comentar sobre mí brevemente :)</p>
+      {/* ABOUT ME */}
+      <div className={`flex flex-col gap-y-10 items-center justify-center z-10 top-2/4 w-5/6 h-0 transition-opacity duration-500 absolute -translate-y-2/4 ${aboutMeSectionClass}`}>
+        <section className={`bg-white/90 text-[#616060] gap-y-10 rounded-lg px-8 py-6`}>
+          <h2 className='text-3xl font-libre-baskerville mb-3'>Sobre mí</h2>
+          <p className='text-xs'>¡Hola! Mi nombre es Lynn, y soy diseñadora gráfica con un favoritismo por el branding.</p>
+          <br />
+          <p className='text-xs'>Estoy graduada en Marketing y Publicidad, pero mi pasión ha sido desde siempre crear y explotar al máximo mi creatividad, por ello, en este portfolio te presento mis proyectos, reales y ficticios. Me gusta salir de mi zona de confort y poder dar mi máximo en cada situación que se me presenta.</p>
+          <br />
+          <p className='text-xs'>Me considero alguien muy, perfeccionista, resolutiva y ambiciosa.</p>
+          <br />
+          <p className='text-xs'>Ah, y también me considero buena cocinera y una chica muy amable, por comentar sobre mí brevemente :)</p>
+        </section>
+        <Link href={'/proyectos'}>
+          <button
+            type="button"
+            className="bg-white/80 hover:bg-white text-black px-11 py-2 rounded-lg text-[0.5rem] font-medium"
+          >
+            Mis proyectos
+          </button>
+        </Link>
+      </div>
+      {/* CONTACT */}
+      <div className={`bg-blue-black absolute bottom-0 w-full transition-all duration-500 z-30 ${!contact ? 'h-0' : 'h-screen'}`}>
+      </div>
+      <section className={`bg-blue-green/80 z-40 rounded-lg absolute bottom-0 transition-all duration-[600ms] w-5/6 ${!contact ? 'h-0' : 'h-5/6'}`}>
       </section>
     </>
   );
