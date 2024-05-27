@@ -83,7 +83,34 @@ const HeaderNav = ({ fixedTop = false }: Props)  => {
       {/* CONTACT */}
       <div className={`bg-blue-black absolute bottom-0 w-full transition-all duration-500 z-30 ${!contact ? 'h-0' : 'h-screen'}`}>
       </div>
-      <section className={`bg-blue-green/80 z-40 rounded-lg absolute bottom-0 transition-all duration-[600ms] w-5/6 ${!contact ? 'h-0' : 'h-5/6'}`}>
+      <section className={`bg-blue-green/80 z-40 rounded-lg absolute bottom-0 transition-all duration-[600ms] w-5/6 flex flex-col px-8 justify-center ${!contact ? 'h-0' : 'h-5/6'}`}>
+        <div className={`transition-all duration-500 overflow-hidden ${!contact ? 'invisible opacity-0 h-0' : 'visible opacity-100 h-auto'}`}>
+          <p className='text-base font-medium'>¡Gracias por estar aquí!</p>
+          <p className='text-3xl text-black font-medium mt-4'>
+            Tengamos una<br /> 
+            <span className='text-2xl'>pequeña</span><br />
+          charla :)</p>
+          <div className='flex items-center mt-10 gap-x-2'>
+            <div className='border border-solid border-white rounded-full w-2 h-2'>
+            </div>
+            <Link href="mailto:itslynnbs@gmail.com" className='text-xs hover:underline' target='_blank'>Mándame un correo</Link>
+          </div>
+          <div className='flex items-center mt-5 gap-x-2'>
+            <div className='border border-solid border-white rounded-full w-2 h-2'>
+            </div>
+            <Link href="https://www.behance.net/rodalynbantilo/projects" className='text-xs hover:underline' target='_blank'>Behance</Link>
+          </div>
+          <div className='flex items-center mt-5 gap-x-2'>
+            <div className='border border-solid border-white rounded-full w-2 h-2'>
+            </div>
+            <Link href="https://www.linkedin.com/in/rodalyn-b-29b72622b/" className='text-xs hover:underline' target='_blank'>Linkedin</Link>
+          </div>
+          <div className='flex items-center mt-5 gap-x-2'>
+            <div className='border border-solid border-white rounded-full w-2 h-2'>
+            </div>
+            <Link href="/proyectos" className='text-xs hover:underline'>Vuelve a mis proyectos</Link>
+          </div>
+        </div>
       </section>
     </>
   );
