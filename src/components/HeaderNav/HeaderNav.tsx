@@ -1,3 +1,5 @@
+"use client";
+
 import Link from 'next/link';
 import { useState } from 'react';
 import '@styles/globals.css';
@@ -20,13 +22,13 @@ const HeaderNav = ({ fixedTop = false }: Props)  => {
     setContact(!contact);
   }
 
-  const headerPositionClass = aboutMe ? 'top-20 -translate-y-1/4' : (fixedTop ? 'top-20 -translate-y-20' : (!contact ? 'top-2/4 -translate-y-2/4' : 'top-20'));
+  const headerPositionClass = aboutMe ? 'top-20 -translate-y-1/4' : (fixedTop ? 'top-10' : (!contact ? 'top-2/4 -translate-y-2/4' : 'top-20'));
   const aboutMeSectionClass = aboutMe ? 'h-auto opacity-100 visible' : 'opacity-0 invisible h-0';
 
   
   return (
     <>
-      <header className={`fixed z-50 text-center bg-white/80 rounded-lg px-2 py-[7px] flex gap-x-4 items-center h-12 transition-all duration-[900ms] ${headerPositionClass}`}>
+      <header className={`fixed z-50 text-center self-center bg-white/80 rounded-lg px-2 py-[7px] flex gap-x-4 items-center h-12 transition-all duration-[900ms] ${headerPositionClass}`}>
         <div className="w-32 relative flex gap-x-4 h-full">
           <div className="w-16 hover:w-full bg-black hover:bg-black rounded-lg text-[0.5rem] flex justify-center items-center transition-width h-full font-medium">
             <button
@@ -75,13 +77,14 @@ const HeaderNav = ({ fixedTop = false }: Props)  => {
           <button
             type="button"
             className="bg-white/80 hover:bg-white text-black px-11 py-2 rounded-lg text-[0.5rem] font-medium"
+            onClick={handleAboutMe}
           >
             Mis proyectos
           </button>
         </Link>
       </div>
       {/* CONTACT */}
-      <div className={`bg-blue-black absolute bottom-0 w-full transition-all duration-500 z-30 ${!contact ? 'h-0' : 'h-screen'}`}>
+      <div className={`bg-blue-black absolute left-0 right-0 bottom-0 w-full transition-all duration-500 z-30 ${!contact ? 'h-0' : 'h-screen'}`}>
       </div>
       <section className={`bg-blue-green/80 z-40 rounded-lg absolute bottom-0 transition-all duration-[600ms] w-5/6 flex flex-col px-8 justify-center ${!contact ? 'h-0' : 'h-5/6'}`}>
         <div className={`transition-all duration-500 overflow-hidden ${!contact ? 'invisible opacity-0 h-0' : 'visible opacity-100 h-auto'}`}>

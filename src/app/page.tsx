@@ -1,5 +1,3 @@
-"use client";
-
 import HeaderNav from "@/components/HeaderNav/HeaderNav";
 
 const Home = () => {
