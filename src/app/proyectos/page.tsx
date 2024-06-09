@@ -30,27 +30,26 @@ const ProyectosPage = () => {
   }
 
   return (
-    <div className="flex flex-col justify-center min-h-screen h-full w-full px-8 mt-32 pb-4">
-      <HeaderNav fixedTop />
+    <>
       <section>
-        <h1 className="text-base font-medium">{type}</h1>
-        <p className="text-xs text-blue-green">{descriptionType}</p>
+        <h1 className="text-base md:text-lg font-medium">{type}</h1>
+        <p className="text-xs md:text-sm text-blue-green">{descriptionType}</p>
         <div className="flex gap-x-2 mt-7">
           <button 
             type="button" 
-            className={`${selectedType === 'Branding' ? 'bg-white text-black border-none' : 'bg-transparent text-white border border-solid border-white'} w-14 text-[0.5rem] rounded-lg px-2 py-[0.38rem]`}
+            className={`${selectedType === 'Branding' ? 'bg-white text-black border-none' : 'bg-transparent text-white border border-solid border-white'} w-14 md:w-20 text-[0.5rem] md:text-xs rounded-lg px-2 py-[0.38rem]`}
             onClick={() => handleType('Branding')}>
               Branding
           </button>
           <button
             type="button"
-            className={`${selectedType === 'Packaging' ? 'bg-white text-black border-none' : 'bg-transparent text-white border border-solid border-white'} w-14 text-[0.5rem] rounded-lg px-2 py-[0.38rem]`}
+            className={`${selectedType === 'Packaging' ? 'bg-white text-black border-none' : 'bg-transparent text-white border border-solid border-white'} w-14 md:w-20 text-[0.5rem] md:text-xs rounded-lg px-2 py-[0.38rem]`}
             onClick={() => handleType('Packaging')}>
               Packaging
             </button>
           <button
             type="button"
-            className={`${selectedType === 'Pósters' ? 'bg-white text-black border-none' : 'bg-transparent text-white border border-solid border-white'} w-14 text-[0.5rem] rounded-lg px-2 py-[0.38rem]`}
+            className={`${selectedType === 'Pósters' ? 'bg-white text-black border-none' : 'bg-transparent text-white border border-solid border-white'} w-14 md:w-20 text-[0.5rem] md:text-xs rounded-lg px-2 py-[0.38rem]`}
             onClick={() => handleType('Pósters')}>
               Pósters
             </button>
@@ -63,8 +62,8 @@ const ProyectosPage = () => {
                     <Link href={project.slug}>
                       <Image src={project.image} alt={project.title} width={1000} height={1000} style={{objectFit: "cover"}} className="aspect-square" />
                     </Link>
-                    <h2 className="font-medium text-xs">{project.title}</h2>
-                    <p className="text-[0.5rem]">{project.description}</p>
+                    <h2 className="font-medium text-xs md:text-base">{project.title}</h2>
+                    <p className="text-[0.5rem] md:text-xs">{project.description}</p>
                   </div>
                 )
               }
@@ -72,7 +71,7 @@ const ProyectosPage = () => {
             )}
         </div>
       </section>
-    </div>
+    </>
   )
 }
 
