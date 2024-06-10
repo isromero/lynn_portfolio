@@ -3,7 +3,7 @@ import Image from 'next/image'
 const UHausPage = () => {
   return (
     <section className='project-section'>
-      <Image src="/UHaus/portada.webp" alt="UHaus Portada" width={1000} height={1000} className='project-normal-img' />
+      <Image src="/UHaus/portada.webp" alt="UHaus Portada" width={1000} height={1000} className='project-banner' />
       <h1 className="project-title">UHaus</h1>
       <div className='space-y-2'>
         <p className='project-title-description'>Resumen</p>
@@ -14,7 +14,7 @@ const UHausPage = () => {
       <Image src="/UHaus/gif_logo.gif" alt="UHaus Gif Logo" width={1000} height={1000} className='project-big-img' />
       <Image src="/UHaus/branding.webp" alt="UHaus Branding" width={1000} height={1000} className='project-big-img' />
       <div className='flex items-center'>
-        <Image src="/UHaus/gif_uhaus.gif" alt="UHaus Gif" width={1000} height={1000} className='project-normal-img project-img-half-width mr-1' />
+        <Image src="/UHaus/gif_uhaus.gif" alt="UHaus Gif" width={1000} height={1000} className='project-img-half-width mr-1 md h-36 sm:h-48 md:h-60 lg:h-72 xl:h-80;' />
         <div className='w-1/2 py-1 space-y-2 ml-1'>
             <p className='project-title-description'>Idea de marca</p>
             <p className='project-text'>‘’Work, Connect, Rest’’ hace referencia a las cosas más cruciales para UHaus, un lugar en el que la vida profesional y personal convive sin conlicto.</p>

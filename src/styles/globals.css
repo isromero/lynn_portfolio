@@ -53,7 +53,7 @@ img {
 }
 
 .project-normal-img {
-  @apply h-36 sm:h-48 md:h-60 lg:h-72 xl:h-80;
+  @apply h-auto;
 }
 
 .project-section img.project-img-half-width {
@@ -61,7 +61,7 @@ img {
 }
 
 .project-big-img {
-  @apply h-52 sm:h-64 md:h-80;
+  @apply h-auto;
 }
 
 .project-title {

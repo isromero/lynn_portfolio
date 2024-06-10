@@ -14,7 +14,9 @@ const TheRollingRollsPage = () => {
           </div>
           <Image src="/TheRollingRolls/logo.webp" alt="TheRollingRolls Logo" width={1000} height={1000} className='project-normal-img project-img-half-width ml-1 object-[55%_50%]' />
         </div>
-        <Image src="/TheRollingRolls/gif_the_rolling_rolls.gif" alt="TheRollingRolls Gif" width={1000} height={1000} className='project-normal-img object-cover rounded-lg' />
+        <div className='overflow-hidden rounded-lg'>
+          <Image src="/TheRollingRolls/gif_the_rolling_rolls.gif" alt="TheRollingRolls Gif" width={1000} height={1000} className='project-normal-img scale-150 !h-32 xs:!h-60 md:!h-72 lg:!h-80 xl:!h-auto xl:!max-h-[45rem]' />
+        </div>
         <div className='flex items-center'>
           <div className='w-1/2 py-1 space-y-2 mr-1'>
               <p className='project-title-description'>Ilustración de personaje</p>
