@@ -10,8 +10,9 @@ jobs:
     runs-on: ubuntu-latest
 
     permissions:
-      id-token: write  # This is required for deploy-pages action
-      contents: read   # This is generally required for actions/checkout
+      id-token: write  # Required for deploy-pages action
+      contents: read   # Generally required for actions/checkout
+      pages: write     # Required for deploying to GitHub Pages
 
     steps:
     - name: Checkout repository
