@@ -108,7 +108,7 @@ const HeaderNav = ({ fixedTop = false }: Props)  => {
           <div className='flex items-center mt-5 gap-x-2'>
             <div className='border border-solid border-white rounded-full w-2 lg:w-3 xl:w-4 h-2 lg:h-3 xl:h-4'>
             </div>
-            <Link href="/proyectos" className='text-xs lg:text-sm xl:text-base hover:underline'>Vuelve a mis proyectos</Link>
+            <Link href="/proyectos" className='text-xs lg:text-sm xl:text-base hover:underline'>Mis proyectos</Link>
           </div>
         </div>
       </section>
