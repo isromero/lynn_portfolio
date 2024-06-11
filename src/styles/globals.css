@@ -5,6 +5,13 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 
+@font-face {
+  font-family: 'Libre Baskerville';
+  font-style: normal;
+  font-weight: 400;
+  src: url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+}
+
 :root {
 }
 
@@ -24,7 +31,7 @@ img {
 }
 
 .font-libre-baskerville {
-  font-family: 'Libre Baskerville';
+  font-family: 'Libre Baskerville' !important;
 }
 
 .transition-width {
