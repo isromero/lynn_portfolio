@@ -12,12 +12,13 @@ type HeaderContextValues = {
   aboutMe: boolean;
   setAboutMe: (value: boolean) => void;
   contact: boolean;
+  setContact: (value: boolean) => void;
   handleAboutMe: () => void;
   handleContact: () => void;
 };
 
 const HeaderNav = ({ fixedTop = false }: Props)  => {
-  const { aboutMe, setAboutMe, contact, handleAboutMe, handleContact } = useHeaderNav() as HeaderContextValues;
+  const { aboutMe, setAboutMe, contact, setContact, handleAboutMe, handleContact } = useHeaderNav() as HeaderContextValues;
 
   const headerPositionClass = aboutMe ? 'top-20 -translate-y-1/4' : (fixedTop ? 'top-10' : (!contact ? 'top-2/4 -translate-y-2/4' : 'top-20'));
   const aboutMeSectionClass = aboutMe ? 'h-auto opacity-100 visible' : 'opacity-0 invisible h-0';
@@ -47,9 +48,13 @@ const HeaderNav = ({ fixedTop = false }: Props)  => {
               </Link>
             </nav>
           </div>
-          <h1 className="text-xs md:text-sm text-[#616060] font-libre-baskerville absolute right-1 md:right-0 mt-1 md:mt-0 leading-none">
+          <Link href={'/'} className='text-xs md:text-xs text-[#616060] font-libre-baskerville absolute right-[-4px] top-[0.3rem] bottom-0 md:mt-0 leading-none'
+          onClick={() => {
+            setAboutMe(false);
+            setContact(false);
+          }}>
             Lynn&apos;s<br />Portfolio
-          </h1>
+          </Link>
         </div>
         <button
           type="button"
@@ -61,7 +66,7 @@ const HeaderNav = ({ fixedTop = false }: Props)  => {
       {/* ABOUT ME */}
       <div className={`flex flex-col gap-y-10 items-center justify-center z-10 top-2/4 w-5/6 lg:w-3/6 h-0 transition-opacity duration-500 absolute -translate-y-2/4 ${aboutMeSectionClass}`}>
         <section className={`bg-white/90 text-[#616060] gap-y-10 rounded-lg px-8 md:px-16 lg:px-20 xl:px-24 py-6 md:py-12 lg:py-16 xl:py-20`}>
-          <h2 className='text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-libre-baskerville mb-3'>Sobre mí</h2>
+          <h2 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-libre-baskerville mb-3'>Sobre mí</h2>
           <p className='text-xs md:text-sm lg:text-base xl:text-lg'>¡Hola! Mi nombre es Lynn, y soy diseñadora gráfica con un favoritismo por el branding.</p>
           <br />
           <p className='text-xs md:text-sm lg:text-base xl:text-lg'>Estoy graduada en Marketing y Publicidad, pero mi pasión ha sido desde siempre crear y explotar al máximo mi creatividad, por ello, en este portfolio te presento mis proyectos, reales y ficticios. Me gusta salir de mi zona de confort y poder dar mi máximo en cada situación que se me presenta.</p>

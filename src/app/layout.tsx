@@ -6,7 +6,7 @@ import HeaderNav from "@/components/HeaderNav/HeaderNav";
 import { usePathname } from "next/navigation";
 import { HeaderNavProvider } from "@/context/HeaderNavContext";
 
-const dm_sans = DM_Sans({ subsets: ["latin"] , display: "swap" });
+const dm_sans = DM_Sans({ subsets: ["latin"] });
 
 export default function RootLayout({
   children,
