@@ -71,9 +71,9 @@ const HeaderNav = ({ fixedTop = false }: Props)  => {
           <br />
           <p className='text-xs md:text-sm lg:text-base xl:text-lg'>Estoy graduada en Marketing y Publicidad, pero mi pasión ha sido desde siempre crear y explotar al máximo mi creatividad, por ello, en este portfolio te presento mis proyectos, reales y ficticios. Me gusta salir de mi zona de confort y poder dar mi máximo en cada situación que se me presenta.</p>
           <br />
-          <p className='text-xs md:text-sm lg:text-base xl:text-lg'>Me considero alguien muy, perfeccionista, resolutiva y ambiciosa.</p>
+          <p className='text-xs md:text-sm lg:text-base xl:text-lg'>Me considero alguien muy perfeccionista, resolutiva y ambiciosa.</p>
           <br />
-          <p className='text-xs md:text-sm lg:text-base xl:text-lg'>Ah, y también me considero buena cocinera y una chica muy amable, por comentar sobre mí brevemente :)</p>
+          <p className='text-xs md:text-sm lg:text-base xl:text-lg'>Ah, y también me considero buena cocinera y una chica muy amable, por comentar sobre mí brevemente :).</p>
         </section>
         <Link href={'/proyectos'}>
           <button
