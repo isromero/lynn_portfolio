@@ -1,10 +1,9 @@
 /** @type {import('next').NextConfig} */
-let nextConfig = {};
-
-if (process.env.NODE_ENV !== "development") {
-  nextConfig = {
-    output: "export",
-  };
-}
+const nextConfig = {
+  output: "export",
+  images: {
+    unoptimized: true,
+  },
+};
 
 export default nextConfig;
