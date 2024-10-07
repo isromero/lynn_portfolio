@@ -1,7 +1,10 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  output: "export"
-};
+let nextConfig = {};
+
+if (process.env.NODE_ENV !== "development") {
+  nextConfig = {
+    output: "export",
+  };
+}
 
 export default nextConfig;
- 
