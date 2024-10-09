@@ -49,7 +49,7 @@ const ManoloBakesXBarbiePage = () => {
         </div>
         <div className="w-1/2 relative">
           <Image
-            src="/Packaging/ManoloBakesXbarbie/3.webp"
+            src="/Packaging/ManoloBakesXBarbie/3.webp"
             alt="Manolo Bakes X Barbie desde cerca packaging"
             width={1000}
             height={1000}
