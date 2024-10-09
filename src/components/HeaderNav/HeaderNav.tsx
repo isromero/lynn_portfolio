@@ -108,25 +108,18 @@ const HeaderNav = ({ fixedTop = false }: Props) => {
             Sobre mí
           </h2>
           <p className="text-xs md:text-sm lg:text-base xl:text-lg">
-            ¡Hola! Mi nombre es Lynn, y soy diseñadora gráfica con un
-            favoritismo por el branding.
+            Hola, soy Lynn, y me licencié en Marketing y publicidad sin embargo,
+            un día decidí tomar un camino autodidacta en el campo del diseño
+            gráfico, desde entonces, mi corazón ha pertenecido al branding,
+            cartelería y diseño de packaging.
           </p>
           <br />
           <p className="text-xs md:text-sm lg:text-base xl:text-lg">
-            Estoy graduada en Marketing y Publicidad, pero mi pasión ha sido
-            desde siempre crear y explotar al máximo mi creatividad, por ello,
-            en este portfolio te presento mis proyectos, reales y ficticios. Me
-            gusta salir de mi zona de confort y poder dar mi máximo en cada
-            situación que se me presenta.
-          </p>
-          <br />
-          <p className="text-xs md:text-sm lg:text-base xl:text-lg">
-            Me considero alguien muy perfeccionista, resolutiva y ambiciosa.
-          </p>
-          <br />
-          <p className="text-xs md:text-sm lg:text-base xl:text-lg">
-            Ah, y también me considero buena cocinera y una chica muy amable,
-            por comentar sobre mí brevemente :).
+            Creativa, emprendedora, proactiva y detallista es lo que me define,
+            por no decir divertida :). Mi pasión es el arte, he estado en todos
+            los campos: fotografía, maquillaje, manualidades, costura y, ahora,
+            diseño gráfico, cualquier cosa me llena como persona, la única
+            condición es que implique crear algo.
           </p>
         </section>
         <Link href={"/proyectos"}>

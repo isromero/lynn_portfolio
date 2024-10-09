@@ -12,13 +12,13 @@
 
 @font-face {
   font-family: "Coolvetica";
-  src: url("/src/assets/fonts/Coolvetica.otf");
+  src: url("/src/assets/fonts/Coolvetica.woff2");
   font-weight: normal;
 }
 
 @font-face {
   font-family: "ChopinScript";
-  src: url("/src/assets/fonts/ChopinScript.otf");
+  src: url("/src/assets/fonts/ChopinScript.woff2");
 }
 
 body {
