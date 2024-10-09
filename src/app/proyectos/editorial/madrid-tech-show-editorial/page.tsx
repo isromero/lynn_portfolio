@@ -45,7 +45,6 @@ const MadridTechShowBrandingPage = () => {
             alt="Madrid Tech Show tarjetas"
             width={1000}
             height={1000}
-            layout="responsive"
             className="rounded-lg"
           />
         </div>
@@ -55,7 +54,6 @@ const MadridTechShowBrandingPage = () => {
             alt="Madrid Tech Show Branding"
             width={1000}
             height={1000}
-            layout="responsive"
             className="rounded-lg"
           />
         </div>

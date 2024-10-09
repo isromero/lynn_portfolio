@@ -38,7 +38,6 @@ const MadridTechShowBrandingPage = () => {
             alt="Madrid Tech Show botellas"
             width={1000}
             height={1000}
-            layout="responsive"
             className="rounded-lg aspect-square"
           />
         </div>
@@ -48,7 +47,6 @@ const MadridTechShowBrandingPage = () => {
             alt="Madrid Tech Show desde tarjeta"
             width={1000}
             height={1000}
-            layout="responsive"
             className="rounded-lg aspect-square"
           />
         </div>
@@ -60,7 +58,6 @@ const MadridTechShowBrandingPage = () => {
             alt="Madrid Tech Show libreta"
             width={1000}
             height={1000}
-            layout="responsive"
             className="rounded-lg"
           />
         </div>
@@ -70,7 +67,6 @@ const MadridTechShowBrandingPage = () => {
             alt="Madrid Tech Show libretas"
             width={1000}
             height={1000}
-            layout="responsive"
             className="rounded-lg"
           />
         </div>

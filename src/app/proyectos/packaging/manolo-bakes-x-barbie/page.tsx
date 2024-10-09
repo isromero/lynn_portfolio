@@ -44,7 +44,6 @@ const ManoloBakesXBarbiePage = () => {
             alt="Manolo Bakes X Barbie desde cerca"
             width={1000}
             height={1000}
-            layout="responsive"
             className="rounded-lg aspect-square"
           />
         </div>
@@ -54,7 +53,6 @@ const ManoloBakesXBarbiePage = () => {
             alt="Manolo Bakes X Barbie desde cerca packaging"
             width={1000}
             height={1000}
-            layout="responsive"
             className="rounded-lg aspect-square"
           />
         </div>
