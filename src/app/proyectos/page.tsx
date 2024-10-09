@@ -1,78 +1,115 @@
 "use client";
 
-import HeaderNav from "@/components/HeaderNav/HeaderNav";
 import { useState } from "react";
 import projectsData from "./projectsData";
-import Image from 'next/image';
+import Image from "next/image";
 import Link from "next/link";
 
 const ProyectosPage = () => {
-  const [type, setType] = useState('Branding');
-  const [descriptionType, setDescriptionType] = useState('Proyectos realizados de manera ficticia  para presentar trabajos de branding.');
-  const [selectedType, setSelectedType] = useState('Branding');
+  const [type, setType] = useState("Packaging");
+  const [selectedType, setSelectedType] = useState("Packaging");
 
   const handleType = (type: string) => {
     setType(type);
     setSelectedType(type);
-    switch (type) {
-      case 'Branding':
-        setDescriptionType('Proyectos realizados de manera ficticia  para presentar trabajos de branding.');
-        break;
-      case 'Packaging':
-        setDescriptionType('Proyectos realizados de manera ficticia  para presentar trabajos de packaging.');
-        break;
-      case 'Pósters':
-        setDescriptionType('Proyectos realizados de manera ficticia  para presentar trabajos de pósters.');
-        break;
-      default:
-        break;
-    }
-  }
+  };
 
   return (
     <>
       <section>
-        <h1 className="text-base md:text-lg font-medium">{type}</h1>
-        <p className="text-xs md:text-sm text-blue-green">{descriptionType}</p>
-        <div className="flex gap-x-2 mt-7">
-          <button 
-            type="button" 
-            className={`${selectedType === 'Branding' ? 'bg-white text-black border-none' : 'bg-transparent text-white border border-solid border-white'} w-14 md:w-20 text-[0.5rem] md:text-xs rounded-lg px-2 py-[0.38rem]`}
-            onClick={() => handleType('Branding')}>
-              Branding
+        <h1 className="font-coolvetica text-5xl lg:text-6xl xl:text-7xl font-medium uppercase">
+          {type}
+        </h1>
+        <div className="font-coolvetica flex gap-x-2 mt-7">
+          <button
+            type="button"
+            className={`${
+              selectedType === "Packaging"
+                ? "bg-white text-black border-none"
+                : "bg-transparent text-white border border-solid border-white"
+            } text-[0.5rem] md:text-xs rounded-lg px-6 py-[0.30rem]`}
+            onClick={() => handleType("Packaging")}
+          >
+            Packaging
           </button>
           <button
             type="button"
-            className={`${selectedType === 'Packaging' ? 'bg-white text-black border-none' : 'bg-transparent text-white border border-solid border-white'} w-14 md:w-20 text-[0.5rem] md:text-xs rounded-lg px-2 py-[0.38rem]`}
-            onClick={() => handleType('Packaging')}>
-              Packaging
-            </button>
+            className={`${
+              selectedType === "Branding"
+                ? "bg-white text-black border-none"
+                : "bg-transparent text-white border border-solid border-white"
+            } text-[0.5rem] md:text-xs rounded-lg px-6 py-[0.30rem]`}
+            onClick={() => handleType("Branding")}
+          >
+            Branding
+          </button>
           <button
             type="button"
-            className={`${selectedType === 'Pósters' ? 'bg-white text-black border-none' : 'bg-transparent text-white border border-solid border-white'} w-14 md:w-20 text-[0.5rem] md:text-xs rounded-lg px-2 py-[0.38rem]`}
-            onClick={() => handleType('Pósters')}>
-              Pósters
-            </button>
+            className={`${
+              selectedType === "Editorial"
+                ? "bg-white text-black border-none"
+                : "bg-transparent text-white border border-solid border-white"
+            } text-[0.5rem] md:text-xs rounded-lg px-6 py-[0.30rem]`}
+            onClick={() => handleType("Editorial")}
+          >
+            Editorial
+          </button>
+          <button
+            type="button"
+            className={`${
+              selectedType === "Pósters"
+                ? "bg-white text-black border-none"
+                : "bg-transparent text-white border border-solid border-white"
+            } text-[0.5rem] md:text-xs rounded-lg px-6 py-[0.30rem]`}
+            onClick={() => handleType("Pósters")}
+          >
+            Pósters
+          </button>
         </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 mt-5 gap-x-8 gap-y-4">
-            {projectsData.map((project) => {
-              if (project.type?.includes(type)) {
-                return (
-                  <div key={project.id} className="rounded-lg space-y-2">
-                    <Link href={project.slug}>
-                      <Image src={project.image} alt={project.title} width={1000} height={1000} style={{objectFit: "cover"}} className="aspect-square" />
-                    </Link>
-                    <h2 className="font-medium text-xs md:text-base">{project.title}</h2>
-                    <p className="text-[0.5rem] md:text-xs">{project.description}</p>
-                  </div>
-                )
-              }
+        <div
+          className={`mt-5 gap-y-8 ${
+            selectedType === "Pósters"
+              ? "grid grid-cols-2 sm:grid-cols-3 gap-x-8"
+              : "flex flex-col w-full"
+          }`}
+        >
+          {projectsData.map((project) => {
+            if (project.type?.includes(type)) {
+              return (
+                <div key={project.id} className="rounded-lg space-y-2">
+                  <Link href={project.slug}>
+                    {selectedType === "Pósters" ? (
+                      <Image
+                        src={project.image}
+                        alt={project.title}
+                        width={1000}
+                        height={1000}
+                        style={{ objectFit: "cover" }}
+                        className="aspect-square"
+                      />
+                    ) : (
+                      <Image
+                        src={project.image}
+                        alt={project.title}
+                        width={2000}
+                        height={1000}
+                        style={{ objectFit: "cover" }}
+                        className="h-96"
+                      />
+                    )}
+                  </Link>
+                  <h2 className="font-coolvetica font-medium text-xl md:text-2xl lg:text-3xl">
+                    {project.title}
+                  </h2>
+                  <p className="text-xs md:text-sm">{project.description}</p>
+                </div>
+              );
             }
-            )}
+          })}
         </div>
       </section>
     </>
-  )
-}
+  );
+};
 
 export default ProyectosPage;
