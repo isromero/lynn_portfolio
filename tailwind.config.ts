@@ -9,18 +9,22 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'blue-black': '#171E1D',
-        'blue-green': '#7EB1A8',
-      } 
+        "blue-black": "#171E1D",
+        "blue-green": "#7EB1A8",
+      },
     },
     screens: {
-      xs: '475px',
-      sm: '640px',
-      md: '768px',
-      lg: '1024px',
-      xl: '1280px',
-      '2xl': '1536px',
-      '3xl': '1920px',
+      xs: "475px",
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
+      "2xl": "1536px",
+      "3xl": "1920px",
+    },
+    fontFamily: {
+      coolvetica: ["Coolvetica"],
+      chopin: ["ChopinScript"],
     },
   },
   plugins: [],

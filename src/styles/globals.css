@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -10,20 +10,31 @@
 @media (prefers-color-scheme: dark) {
 }
 
+@font-face {
+  font-family: "Coolvetica";
+  src: url("/src/assets/fonts/Coolvetica.otf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "ChopinScript";
+  src: url("/src/assets/fonts/ChopinScript.otf");
+}
+
 body {
   @apply bg-blue-black text-white scroll-smooth h-full;
 }
 
 img {
-  @apply rounded-lg object-cover; 
+  @apply rounded-lg object-cover;
 }
 
 .background-video {
-  @apply object-cover w-full h-full;
+  @apply object-cover w-full h-full grayscale;
 }
 
 .font-libre-baskerville {
-  font-family: 'Libre Baskerville';
+  font-family: "Libre Baskerville";
 }
 
 .transition-width {
@@ -56,7 +67,7 @@ img {
 }
 
 .project-section img.project-img-half-width {
- @apply w-1/2;
+  @apply w-1/2;
 }
 
 .project-big-img {
