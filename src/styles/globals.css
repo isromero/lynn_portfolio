@@ -12,9 +12,9 @@
 
 @font-face {
   font-family: "Coolvetica";
-  src: url("/src/assets/fonts/Coolvetica.woff2") format("woff2"),
-    url("/src/assets/fonts/Coolvetica.woff") format("woff"),
-    url("/src/assets/fonts/Coolvetica.ttf") format("truetype");
+  src: url("../assets/fonts/Coolvetica.woff2") format("woff2"),
+    url("../assets/fonts/Coolvetica.woff") format("woff"),
+    url("../assets/fonts/Coolvetica.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -22,9 +22,9 @@
 
 @font-face {
   font-family: "ChopinScript";
-  src: url("/src/assets/fonts/ChopinScript.woff2") format("woff2"),
-    url("/src/assets/fonts/ChopinScript.woff") format("woff"),
-    url("/src/assets/fonts/ChopinScript.ttf") format("truetype");
+  src: url("../assets/fonts/ChopinScript.woff2"),
+    url("../assets/fonts/ChopinScript.woff"),
+    url("../assets/fonts/ChopinScript.ttf");
   font-weight: normal;
   font-style: normal;
   font-display: swap;

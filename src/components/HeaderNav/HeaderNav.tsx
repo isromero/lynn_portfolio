@@ -155,7 +155,7 @@ const HeaderNav = ({ fixedTop = false }: Props) => {
           <p className="text-5xl md:text-6xl lg:text-7l xl:text-8xl text-black font-medium mt-4">
             Tengamos una pequeña charla :)
           </p>
-          <div className="flex items-center mt-32 xs:mt-44 md:mt-60 gap-x-2">
+          <div className="flex items-center mt-20 xs:mt-24 md:mt-34 gap-x-2">
             <div className="border border-solid border-white rounded-full w-2 lg:w-3 xl:w-4 h-2 lg:h-3 xl:h-4"></div>
             <Link
               href="mailto:itslynnbs@gmail.com"
