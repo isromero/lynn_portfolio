@@ -40,7 +40,7 @@ const ManoloBakesXBarbiePage = () => {
       <div className="flex w-full space-x-4">
         <div className="w-1/2 relative">
           <Image
-            src="/Packaging/ManoloBakesXbarbie/2.webp"
+            src="/Packaging/ManoloBakesXBarbie/2.webp"
             alt="Manolo Bakes X Barbie desde cerca"
             width={1000}
             height={1000}
